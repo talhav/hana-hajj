@@ -7,6 +7,7 @@ const successPanel = document.getElementById("success-panel");
 const successRefId = document.getElementById("success-ref-id");
 const newRegistrationBtn = document.getElementById("new-registration-btn");
 
+const formCard = document.querySelector(".form-card");
 const cnicInput = document.getElementById("cnic");
 const mobileInput = document.getElementById("mobile");
 
@@ -143,8 +144,7 @@ form.addEventListener("submit", async (e) => {
       return;
     }
 
-    form.hidden = true;
-    document.querySelector(".info-banner").hidden = true;
+    formCard.hidden = true;
     successRefId.textContent = result.id.slice(-8).toUpperCase();
     successPanel.hidden = false;
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -157,8 +157,7 @@ form.addEventListener("submit", async (e) => {
 
 newRegistrationBtn.addEventListener("click", () => {
   form.reset();
-  form.hidden = false;
-  document.querySelector(".info-banner").hidden = false;
+  formCard.hidden = false;
   successPanel.hidden = true;
   clearErrors();
   window.scrollTo({ top: 0, behavior: "smooth" });
