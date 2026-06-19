@@ -92,3 +92,16 @@ Visit [http://localhost:8000](http://localhost:8000)
 
 - CNIC is stored with a unique index to prevent duplicate registrations.
 - WhatsApp delivery is handled outside this app (manual or via a future integration).
+
+## Railway Deployment
+
+Railway uses [Railpack](https://railpack.com/languages/python/) and expects a start command. This project keeps the FastAPI app in `app/main.py`, so the start command is configured in `Procfile`, `railway.json`, and `railpack.json`.
+
+**Required environment variables on Railway:**
+
+| Variable | Example |
+|----------|---------|
+| `MONGODB_URI` | `mongodb+srv://user:pass@cluster.mongodb.net/?retryWrites=true&w=majority` |
+| `MONGODB_DB` | `hana_travels` |
+
+After connecting the GitHub repo, redeploy once these files are on `main`.
