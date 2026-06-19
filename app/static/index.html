@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hajj 2027 Pre-Registration | Hana Travels</title>
+  <link rel="icon" href="/static/logo.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="bg-pattern" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="/" class="brand" aria-label="Hana Travels home">
+      <img src="/static/logo.png" alt="Hana Travels" class="brand-logo" />
+    </a>
+    <span class="year-badge">Hajj 2027</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Pre-Registration Form</h1>
+      <p class="hero-subtitle">
+        Begin your sacred journey with us. Fill in your details below and our team will handle the rest.
+      </p>
+    </section>
+
+    <section class="info-banner" role="note">
+      <div class="info-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="M12 8v4"/><path d="M12 16h.01"/>
+        </svg>
+      </div>
+      <div>
+        <h2>What happens after you submit?</h2>
+        <p>
+          Once you complete this form, <strong>Hana Travels will register you on the official government Hajj portal on your behalf</strong>.
+          Your registration receipt will be sent directly to your <strong>WhatsApp</strong> number — no hassle, no confusion.
+        </p>
+      </div>
+    </section>
+
+    <form id="registration-form" class="registration-form" novalidate>
+      <fieldset>
+        <legend>Personal Details</legend>
+
+        <div class="form-group">
+          <label for="full_name">Full Name <span class="hint">(as per CNIC)</span></label>
+          <input
+            type="text"
+            id="full_name"
+            name="full_name"
+            placeholder="e.g. Muhammad Ali Khan"
+            autocomplete="name"
+            required
+          />
+          <span class="field-error" data-for="full_name"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="father_or_husband_name">Father's / Husband's Name <span class="hint">(as per CNIC)</span></label>
+          <input
+            type="text"
+            id="father_or_husband_name"
+            name="father_or_husband_name"
+            placeholder="e.g. Abdul Rehman"
+            required
+          />
+          <span class="field-error" data-for="father_or_husband_name"></span>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date_of_birth">Date of Birth</label>
+            <input
+              type="date"
+              id="date_of_birth"
+              name="date_of_birth"
+              required
+            />
+            <span class="field-error" data-for="date_of_birth"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="cnic">CNIC Number</label>
+            <input
+              type="text"
+              id="cnic"
+              name="cnic"
+              placeholder="12345-1234567-1"
+              inputmode="numeric"
+              maxlength="15"
+              required
+            />
+            <span class="field-error" data-for="cnic"></span>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact Information</legend>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <textarea
+            id="address"
+            name="address"
+            rows="3"
+            placeholder="House no., Street, Area, City"
+            required
+          ></textarea>
+          <span class="field-error" data-for="address"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="mobile">Mobile Number <span class="hint">(WhatsApp preferred)</span></label>
+          <div class="input-with-prefix">
+            <span class="prefix">+92</span>
+            <input
+              type="tel"
+              id="mobile"
+              name="mobile"
+              placeholder="3001234567"
+              inputmode="tel"
+              maxlength="11"
+              required
+            />
+          </div>
+          <span class="field-error" data-for="mobile"></span>
+        </div>
+      </fieldset>
+
+      <div id="form-alert" class="form-alert" hidden role="alert"></div>
+
+      <button type="submit" class="submit-btn" id="submit-btn">
+        <span class="btn-text">Submit Pre-Registration</span>
+        <span class="btn-loader" hidden aria-hidden="true"></span>
+      </button>
+
+      <p class="form-footer-note">
+        By submitting, you agree to share your details with Hana Travels for Hajj 2027 registration purposes.
+      </p>
+    </form>
+
+    <section id="success-panel" class="success-panel" hidden>
+      <div class="success-icon" aria-hidden="true">✓</div>
+      <h2>Pre-Registration Received!</h2>
+      <p id="success-message">
+        Thank you for registering with Hana Travels. We will complete your official government registration
+        and send your receipt to your WhatsApp shortly.
+      </p>
+      <p class="success-ref">Reference: <strong id="success-ref-id"></strong></p>
+      <button type="button" class="secondary-btn" id="new-registration-btn">Submit Another Registration</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Hana Travels. All rights reserved.</p>
+    <p class="footer-dua">May Allah accept your Hajj. Ameen.</p>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
